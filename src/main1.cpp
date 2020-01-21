@@ -2,10 +2,12 @@
 #include "Circle.h"
 #include "task1.h"
 
+using namespace std;
 
 int main()
 
 {
-	calcDelta();
+	cout << calcDelta();
+	return 0;
 }
 
