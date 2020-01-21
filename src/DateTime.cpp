@@ -44,7 +44,8 @@ string DateTime::getToday()
 
 string DateTime::getPast(unsigned int n)
 {
-	DateTime past = DateTime();
+	DateTime past;
+	memcpy(past.Time, Time, sizeof(tm));
 	past.Time->tm_mday = past.Time->tm_mday - n;
 	mktime(past.Time);
 	return past.getToday();
@@ -52,7 +53,8 @@ string DateTime::getPast(unsigned int n)
 
 string DateTime::getFuture(unsigned int n)
 {
-	DateTime future = DateTime();
+	DateTime future;
+	memcpy(future.Time, Time, sizeof(tm));
 	future.Time->tm_mday = future.Time->tm_mday + n;
 	mktime(future.Time);
 	return future.getToday();
