@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "DateTime.h"
 #include <iostream>
+#include <string.h>
 #include <time.h>
 
 using namespace std;
