@@ -8,7 +8,7 @@ double calcDelta()
 	double rad = 6378100;
 	Circle Earth(rad);
 	Earth.setFerence(Earth.getFerence() + 1);
-	double result = round((Earth.getRadius() - rad)*10)/10;
+	double result = round((Earth.getRadius() - rad)*1000)/1000;
 	return result;
 }
 
