@@ -2,24 +2,19 @@
 #include "Circle.h"
 
 
-double calcDelta() 
+double calcDelta()
 {
-	double earthRadius = 6378100.0;
-	double ropeLength = 1.0;
-	Circle Earth(earthRadius);
-	double length = Earth.getFerence() + ropeLength;
-	Earth.setFerence(length);
-	return Earth.getRadius() - earthRadius;
+	double rad = 6378100;
+	Circle Earth(rad);
+	Earth.setFerence(Earth.getFerence() + 1);
+	return (Earth.getRadius() - rad);
 }
 
 double calcCost()
 {
-	double sqrmeterCost = 1000.0;
-	double meterCost = 2000.0;
-	Circle SwimmingPool(3.0);
-	double oldArea = SwimmingPool.getArea();
-	SwimmingPool.setRadius(4.0);
-	double roadPrice = (SwimmingPool.getArea() - oldArea) * sqrmeterCost;
-	double wallPrice = SwimmingPool.getFerence() * meterCost;
-	return roadPrice + wallPrice;
+	Circle Pool(3);
+	Circle Pool_road(4);
+	double cost_road = (Pool_road.getArea() - Pool.getArea()) * 1000;
+	double cost_fence = Pool_road.getFerence() * 2000;
+	return cost_road + cost_fence;
 }
