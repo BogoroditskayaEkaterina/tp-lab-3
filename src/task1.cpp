@@ -18,6 +18,6 @@ double calcCost()
 	Circle Pool_road(4);
 	double cost_road = (Pool_road.getArea() - Pool.getArea()) * 1000;
 	double cost_fence = Pool_road.getFerence() * 2000;
-	double result = round((cost_road + cost_fence)*10)/10;
+	double result = round((cost_road + cost_fence)*100)/100;
 	return result;
 }
