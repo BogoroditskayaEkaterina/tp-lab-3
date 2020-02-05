@@ -2,7 +2,7 @@
 #include "task1.h"
 #include <math.h>
 
-const double pi = 3.1415;
+const double pi = 3.141;
 
 Circle::Circle(double rad)
 {
